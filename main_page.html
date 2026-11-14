@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Roofing Checklist</title>
+  <script src="checklist.js" defer></script>
+</head>
+<body>
+
+<h3 id="addressDisplay">Roofing Checklist</h3>
+
+<p>BR- <input type="text" id="jobno"></p>
+<p>Client Name: <input type="text" id="clientName"></p>
+<p>Address: <input type="text" id="addressInput"></p>
+<p>Waste %: <input type="number" id="wastePercent" value="10"></p>
+
+<h2>Measurements</h2>
+<p>Pitch: <input type="number" id="pitch"></p>
+<p>Roof Area (sq ft): <input type="number" id="area"></p>
+<p>Eave & Rake Length (ft): <input type="number" id="eave"></p>
+<p>Hip & Ridge Length (ft): <input type="number" id="hipridgeLength"></p>
+<p>Ridge Vent Length (ft): <input type="number" id="ridgeVentLength"></p>
+<p>Eaves Only Length (ft): <input type="number" id="eavesOnly"></p>
+<p>Valleys (ft): <input type="number" id="valleys"></p>
+<p>Step Flashing (ft): <input type="number" id="stepFlashingLength"></p>
+<p>Wall Flashing (ft): <input type="number" id="wallFlashingLength"></p>
+<p>Flat Roof Area (squares): <input type="number" id="flatRoofSquares"></p>
+<p>Soffit Width (inches):<input type="number" id="soffitWidth">
+  <label><input type="checkbox" id="soffitNotMeasured"> Not Measured</label></p>
+
+<p>
+  Roof Type:
+  <select id="roofType">
+    <option value="">-- Select Roof Type --</option>
+    <option value="gable">Gable</option>
+    <option value="hip">Hip</option>
+    <option value="both">Gable + Hip</option>
+  </select>
+</p>
+
+<h2>Manufacturer</h2>
+
+<p>
+  Manufacturer:
+  <select id="manufacturer">
+    <option value="">-- Select Manufacturer --</option>
+
+    <option value="Atlas">Atlas</option>
+
+    <option value="OC-3">OC Class 3</option>
+    <option value="OC-4">OC Class 4</option>
+
+    <option value="Malarkey">Malarkey</option>
+    <option value="Malarkey Legacy">Malarkey Legacy</option>
+    <option value="Malarkey Vista">Malarkey Vista</option>
+
+    <option value="Tamko">Tamko</option>
+  </select>
+</p>
+
+<p>
+  Color:
+  <select id="color">
+    <option value="">-- Select Color --</option>
+  </select>
+</p>
+
+<h2>Ventilation & Accessories</h2>
+
+<p>Box Vents: <input type="number" id="boxventsQty"></p>
+<p>
+  Box Vent Color:
+  <select id="boxventColor">
+    <option value="">-- Select Color --</option>
+    <option value="Black">Black</option>
+    <option value="Brown">Brown</option>
+    <option value="Weathered Wood">Weathered Wood</option>
+  </select>
+</p>
+<p>
+  More Box Vents Needed?
+  <input type="checkbox" id="boxventsMore">
+  <span id="boxventsMoreWrapper" style="display:none;">
+    How many more? <input type="number" id="boxventsMoreQty">
+  </span>
+</p>
+
+<p>Pipe Boots: <input type="number" id="pipebootsQty"></p>
+
+<p>
+  <input type="checkbox" id="unknownVentilation">
+  Unknown Ventilation
+</p>
+
+<p>Drip Edge: <input type="number" id="dripedgeQty"></p>
+<p>Gutter Apron: <input type="number" id="gutterapronQty"></p>
+
+<h2>Decking</h2>
+
+<p>
+  Decking Material:
+  <select id="deckingMaterial">
+    <option value="">-- Select Material --</option>
+    <option value="1x boards">1x Boards</option>
+    <option value="plywood">Plywood</option>
+    <option value="osb">OSB</option>
+  </select>
+</p>
+
+<p id="thicknessWrapper" style="display:none;">
+  Thickness:
+  <select id="deckingThickness">
+    <option value="">-- Select Thickness --</option>
+    <option value="7/16">7/16"</option>
+    <option value="1/2">1/2"</option>
+    <option value="5/8">5/8"</option>
+    <option value="3/4">3/4"</option>
+  </select>
+</p>
+
+<p>
+  <input type="checkbox" id="unknownDecking">
+  Unknown Decking
+</p>
+
+<h2>Materials Needed</h2>
+
+<ul>
+  <li id="starterstrip">Starter Strip (bundles): 0</li>
+  <li id="shingles">Shingles (bundles): 0</li>
+  <li id="hipridge">Hip & Ridge (bundles): 0</li>
+  <li id="valleymetal">Valley Metal (rolls): 0</li>
+  <li id="icewater">Ice & Water (rolls): 0</li>
+  <li id="underlayment">Underlayment (rolls): 0</li>
+  <li id="nails">Nails (boxes): 0</li>
+  <li id="staples">Staples (boxes): 0</li>
+  <li id="ridgevent">Ridge Vent (rolls): 0</li>
+  <li id="boxventsResult">Box Vents: 0</li>
+  <li id="pipebootsResult">Pipe Boots: 0</li>
+  <li id="dripedge">Drip Edge (pieces): 0</li>
+  <li id="gutterapron">Gutter Apron (pieces): 0</li>
+  <li id="stepflashing">Step Flashing (packs): 0</li>
+  <li id="wallflashing">Wall Flashing (pieces): 0</li>
+  <li id="decking">Decking: Not selected</li>
+  <li id="redecking">Redecking: Not applicable</li>
+  <li id="flatroofResult">Flat Roof:</li>
+</ul>
+
+</body>
+</html>
